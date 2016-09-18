@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension
+	version="1.6.0"
+	type="plugin"
+	group="content">
+	<name>PLG_CONTENT_JBIBHTML</name>
+	<author>Krishan Rajaratnam</author>
+	<creationDate>08/27/2016 00:00:00</creationDate>
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>kr.rajaratnam@mail.utoronto.ca</authorEmail>
+	<authorUrl>http://krishanr.nfshost.com</authorUrl>
+	<version>1.0.2</version>
+	<description>Bibtex plugin for Joomla.</description>
+	<files
+		folder="jbibhtml">
+		<filename
+			plugin="jbibhtml">jbibhtml.php</filename>
+		<filename>index.html</filename>
+		<filename>bibtexbrowser.local.php</filename>
+		<filename>bibtexbrowser.php</filename>
+	</files>
+	<!-- Media files -->
+	<media
+		destination="plg_jbibhtml"
+		folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	<languages
+		folder="language">
+		<language
+			tag="en-GB">en-GB.plg_content_jbibhtml.ini</language>
+		<language
+			tag="en-GB">en-GB.plg_content_jbibhtml.sys.ini</language>
+	</languages>
+	<config>
+		<fields
+			name="params">
+			<fieldset
+				name="basic"
+				label="Basic">
+				<field
+					p3:type="text"
+					name="bibtex_file"
+					label="Bibtex File"
+					type="text"
+					description="The location of the bibtex file relative to the site root which is to be displayed. E.g. 'media/plg_jbibhtml/example.bib'"
+					size="30" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+				<field
+					p3:type="list"
+					name="ABBRV_TYPE"
+					label="Abbrv Type"
+					type="list"
+					description="The text presented for each citation. E.g. index would give citations like [2]."
+					default="index"
+					validate="options"
+					size="1" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">
+					<option
+						value="index">Index</option>
+					<option
+						value="key">Key</option>
+					<option
+						value="year">Year</option>
+					<option
+						value="x-abbrv">X-abbrv</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced"
+				label="Advanced" />
+		</fields>
+	</config>
+</extension>
